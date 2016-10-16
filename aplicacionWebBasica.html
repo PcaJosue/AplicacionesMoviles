@@ -1,0 +1,40 @@
+# AplicacionesMoviles
+<html ng-app="miapp">
+    <head>
+        <link href="C:\ionic\css\ionic.min.css" rel="stylesheet">
+        <script src="C:\ionic\js\ionic.bundle.js"> </script>
+    </head>
+    <body ng-controller="control1">
+        <ion-header-bar class="bar-positive">
+            <buttons>
+                <button class="button button-clear" ng-click="imprimir()">
+                    <i class="icon ion-ios-star" > </i> Agregar usuario
+                </button>
+            </buttons>
+            <h1 class="title"> Mi aplicacion </h1>
+            <buttons>
+                <button class="button button-positive" ng-click="imprimir2()">
+                    <i class="icon ion-home">
+                    </i>
+                </button>>
+            </buttons>>
+        </ion-header-bar>
+        <ion-content>
+            {{mensaje}}
+        </ion-content>
+        <script>
+            var miapp=angular.module('miapp',['ionic']).
+            controller('control1',function($scope){
+                
+               $scope.mensaje="";
+                $scope.imprimir1=function(){
+                    $scope.mensaje='estamos abiertos';                    
+                };
+                $scope.imprimir2=function(){
+                    $scope.mensaje='estamos cerrados';
+                };
+                
+            });
+        </script>
+    </body>
+</html>
